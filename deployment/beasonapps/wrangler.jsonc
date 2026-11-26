@@ -1,0 +1,9 @@
+{
+  "name": "beasonapps-publisher",
+  "account_id": "2e7f010f2c5d2f32027eff698edbd9c6",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{"pattern": "beasonapps.com", "custom_domain": true}]
+}
