@@ -8,11 +8,11 @@ export default {
         headers: {'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=300','X-Content-Type-Options':'nosniff'}
       });
     }
-    // The root domain serves the existing public app website; its GitHub Pages origin stays intact.
+    // App content has a single canonical home on the app subdomain.
+    // Browsers preserve an incoming fragment when Location has no fragment.
     if (!['GET', 'HEAD'].includes(request.method)) return new Response('Method not allowed', {status:405,headers:{Allow:'GET, HEAD'}});
     url.hostname = 'phantom.beasonapps.com';
     url.protocol = 'https:';
-    const response = await fetch(new Request(url, request), {redirect:'follow'});
-    return new Response(response.body, response);
+    return new Response(null, {status:301, headers:{Location:url.toString(), 'Cache-Control':'public, max-age=300'}});
   }
 };
