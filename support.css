@@ -4,3 +4,22 @@
 @media(max-width:760px){.support-site .site-header{gap:16px;flex-wrap:wrap;padding:18px 0}.support-site .site-header nav{order:3;width:100%;justify-content:space-between;gap:14px;margin:0}.support-site .site-header>.button{margin-left:auto}.support-site .brand{font-size:1.125rem}.support-hero{grid-template-columns:1fr;gap:46px;padding:52px 0}.support-art{height:390px;max-width:410px;width:100%;margin:auto}.support-art img{height:350px}.art-circle{width:280px;height:280px;left:12%;top:25px}.art-note{padding:16px;max-width:100%}.art-note strong{font-size:.9375rem}.support-section{padding:52px 0}.channel-grid,.report-section{grid-template-columns:1fr;gap:24px}.channel{padding:26px}.report-section{gap:16px}.support-cta{display:block;padding:28px;margin-bottom:50px}.support-cta .button{margin-top:28px}.guide-hero{padding-top:50px}.guide-articles article{padding:30px 0}.guide-articles h2{font-size:1.7rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.channel{transition:none}.button,.outline-button{transition:none}}
 @media(max-width:760px){.support-site .site-header nav{display:flex}.support-site .site-header>.button{display:inline-flex}}
+/* Let form controls and footer columns shrink and wrap within narrow viewports. */
+.support-site .report-section{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)}
+.support-site .report-section>*{min-width:0}
+.support-site input,.support-site textarea,.support-site select{max-width:100%;min-width:0}
+.form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:8px}
+.form-actions button{margin:0;max-width:100%;white-space:normal}
+.form-actions .outline-button{color:#192128;border:1px solid #bac4cc;box-shadow:none}
+.recipient-note,.form-hint{font-size:.9375rem;color:#49545c;margin:8px 0;overflow-wrap:anywhere}
+.recipient-note a{color:#b83712}
+.form-status:not([hidden]){margin:12px 0 0;padding:16px;border:1px solid #dfe5e9;background:#f5f8fa;border-radius:10px;color:#34414b;line-height:1.7}
+.form-status a{display:inline-block;max-width:100%;margin-top:6px;color:#b83712;overflow-wrap:anywhere}
+.support-site .site-footer{width:100%;margin:0;padding:42px max(24px,calc((100% - 1180px)/2)) calc(96px + env(safe-area-inset-bottom,0px));grid-template-columns:minmax(0,1fr);gap:22px}
+.support-site .site-footer>*{min-width:0;max-width:100%}
+.support-site .footer-brand{align-items:center}
+.support-site .footer-links{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:flex-start}
+.support-site .footer-links a{display:inline-block;font-size:.9375rem;line-height:1.6;overflow-wrap:anywhere;padding:4px 0}
+.support-site .site-footer .legal{max-width:900px;font-size:.9375rem;color:#606b73;line-height:1.75;overflow-wrap:anywhere}
+.support-site .site-footer .copyright{text-align:left;font-size:.875rem;color:#606b73;line-height:1.7}
+@media(max-width:760px){.support-site .report-section{grid-template-columns:minmax(0,1fr)}.form-actions{align-items:stretch}.form-actions button{flex:1 1 180px}.support-site .site-header nav{gap:10px 18px;flex-wrap:wrap}}
